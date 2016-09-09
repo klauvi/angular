@@ -9,7 +9,6 @@ function Ass1Controller($scope) {
   $scope.lunchInput = "";
   $scope.countFood = function () {
     var text = $scope.lunchInput.trim().split(',');
-    console.log(text);
     if(text.length == 1 && text[0] == "") {
     	$scope.message = "Please enter data first";
     }
