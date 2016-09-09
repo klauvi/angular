@@ -6,10 +6,11 @@ angular.module('Ass1App', [])
 
 Ass1Controller.$inject = ['$scope'];
 function Ass1Controller($scope) {
-
+  $scope.lunchInput = "";
   $scope.countFood = function () {
     var text = $scope.lunchInput.trim().split(',');
-    if(text.length <= 0) {
+    console.log(text);
+    if(text.length == 1 && text[0] == "") {
     	$scope.message = "Please enter data first";
     }
     else if(text.length < 4) {
